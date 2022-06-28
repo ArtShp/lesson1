@@ -2,15 +2,17 @@ package com.company;
 
 public class Main {
     public static void main(String[] args) {
-	    /*
+
         //Begin1. Дана сторона квадрата a. Найти его периметр P = 4·a
+        /*
         int a = 6;
         int P = a*4;
 
         System.out.println(P);
         */
-	    /*
+
         //Begin2. Дана сторона квадрата a. Найти его площадь S = a^2
+        /*
         int a = 6;
         int S = a*a;
 
@@ -70,7 +72,7 @@ public class Main {
         // произведение и частное их квадратов
         int a = 3, b = 5;
         int sum = a*a + b*b, diff = a*a - b*b, prod = a*a * b*b;
-        double quot = a*a / (b*b);
+        double quot = a*a / (double)(b*b);
         System.out.println(sum);
         System.out.println(diff);
         System.out.println(prod);
@@ -80,7 +82,7 @@ public class Main {
 	    //Begin11. Даны два ненулевых числа. Найти сумму, разность, произведение и частное их модулей
         int a = -3, b = 4;
         int sum = Math.abs(a) + Math.abs(b), diff = Math.abs(a) - Math.abs(b), prod = Math.abs(a) * Math.abs(b);
-        double quot = Math.abs(a) / Math.abs(b);
+        double quot = Math.abs(a) / (double)Math.abs(b);
         System.out.println(sum);
         System.out.println(diff);
         System.out.println(prod);
@@ -127,6 +129,102 @@ public class Main {
         double L = pi*D;
         System.out.println(D);
         System.out.println(L);
+        */
+        //Begin16. Найти расстояние между двумя точками с заданными координатами x1 и x2 на числовой оси: |x2 − x1|
+        /*
+        int x1 = 3, x2 = 5;
+        int dist = Math.abs(x2 - x1);
+        System.out.println(dist);
+        */
+
+        //Begin17. Даны три точки A, B, C на числовой оси. Найти длины отрезков AC и BC и их сумму
+        /*
+        int A = 1, B = 5, C = 4;
+        int AC = Math.abs(A-C), BC = Math.abs(B-C);
+        int sum = AC + BC;
+        System.out.println(AC);
+        System.out.println(BC);
+        System.out.println(sum);
+        */
+
+        //Begin18. Даны три точки A, B, C на числовой оси.
+        //Точка C расположена между точками A и B. Найти произведение длин отрезков AC и BC
+        /*
+        int A = 1, B = 5, C = 4;
+        int AC = Math.abs(A-C), BC = Math.abs(B-C);
+        int prod = AC * BC;
+        System.out.println(prod);
+        */
+
+        //Begin19. Даны координаты двух противоположных вершин прямоугольника:
+        //(x1, y1), (x2, y2). Стороны прямоугольника параллельны осям координат.
+        //Найти периметр и площадь данного прямоугольника
+        /*
+        int x1 = 1, y1 = 1, x2 = 3, y2 = 4;
+        int a = Math.abs(x2-x1), b = Math.abs(y2-y1);
+        int P = (a+b)*2, S = a*b;
+        System.out.println(P);
+        System.out.println(S);
+        */
+
+        //Begin20. Найти расстояние между двумя точками с заданными координатами (x1, y1) и (x2, y2) на плоскости.
+        //Расстояние вычисляется по формуле sqrt(x2 − x1)^2 + (y2 − y1)^2
+        /*
+        int x1 = 1, y1 = 1, x2 = 3, y2 = 4;
+        double dist = Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
+        System.out.println(dist);
+        */
+
+        //Begin21. Даны координаты трех вершин треугольника: (x1, y1), (x2, y2), (x3, y3).
+        //Найти его периметр и площадь, используя формулу для расстояния между двумя точками на плоскости (см. задание Begin20). Для нахождения
+        //площади треугольника со сторонами a, b, c использовать формулу Герона:
+        //S = √p·(p − a)·(p − b)·(p − c)
+        /*
+        int x1 = 1, y1 = 1, x2 = 3, y2 = 4, x3 = 5, y3 = 2;
+        double a = Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1)),
+               b = Math.sqrt((x3-x1)*(x3-x1) + (y3-y1)*(y3-y1)),
+               c = Math.sqrt((x3-x2)*(x3-x2) + (y3-y2)*(y3-y2));
+        double P = (a+b+c);
+        double p = P/2;
+        double S = Math.sqrt(p*(p-a)*(p-b)*(p-c));
+        System.out.println(P);
+        System.out.println(S);
+        */
+
+        //Begin22. Поменять местами содержимое переменных A и B и вывести новые значения A и B
+        /*
+        int A = 3, B = -4;
+        int C = B;
+        B = A;
+        A = C;
+        System.out.println(A);
+        System.out.println(B);
+        */
+
+        //Begin23. Даны переменные A, B, C. Изменить их значения, переместив содержимое A в B, B — в C, C — в A,
+        //и вывести новые значения переменных A, B, C
+        /*
+        int A = 0, B = 5, C = -3;
+        int tmp = B;
+        B = A;
+        A = C;
+        C = tmp;
+        System.out.println(A);
+        System.out.println(B);
+        System.out.println(C);
+        */
+
+        //Begin24. Даны переменные A, B, C. Изменить их значения, переместив содержимое A в C, C — в B, B — в A,
+        //и вывести новые значения переменных A, B, C
+        /*
+        int A = 0, B = 5, C = -3;
+        int tmp = C;
+        C = A;
+        A = B;
+        B = tmp;
+        System.out.println(A);
+        System.out.println(B);
+        System.out.println(C);
         */
     }
 }
